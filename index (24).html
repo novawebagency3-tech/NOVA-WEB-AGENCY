@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-G1XV2ijQax17zkZwH86OTPWpRJG2aadmLZiZKzksFVE='; style-src 'sha256-at8ewYgqBTsCkws+2ZfbccinXEYEYR9ex4drxSH+T/k='; img-src 'self' data: blob: https:; connect-src 'self' https://api.jsonbin.io https://jsonbin.io; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0B0E14">
+<title>Nova Web Agency – Web Design &amp; AI Solutions | Siti web su misura in tutta Italia</title>
+<meta name="description" content="Nova Web Agency: siti web veloci e su misura, menù digitali, prenotazioni WhatsApp e AI Automations per attività in tutta Italia. Prima vedi il prototipo, poi decidi.">
+<meta property="og:title" content="Nova Web Agency – Web Design & AI Solutions">
+<meta property="og:description" content="Siti web su misura e automazioni intelligenti per la tua attività, in tutta Italia.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0E14'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%2338BDF8' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23F8FAFC'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0B0E14;--bg2:#121722;--glass:rgba(22,28,40,.85);--line:rgba(255,255,255,.10);--silver:#F8FAFC;--cyan:#38BDF8;--gold:#D4AF37;--muted:#9AA7BA;--r:20px;--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--silver);font-family:var(--font);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+#nova3d{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+header,main,footer{position:relative;z-index:1}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+/* Header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:.9rem}
+.brand img{height:40px;width:auto}
+.brand .fb{background:linear-gradient(90deg,var(--silver),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav{display:none;gap:22px;font-size:.92rem;color:var(--muted)}
+.nav a:hover{color:var(--silver)}
+.burger{background:none;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;font-size:1.2rem}
+.mnav{display:none;flex-direction:column;background:rgba(11,14,20,.96);border-bottom:1px solid var(--line);padding:8px 16px 16px}
+.mnav.open{display:flex}
+.mnav a{padding:12px 4px;border-bottom:1px solid var(--line);color:var(--muted)}
+@media(min-width:900px){.nav{display:flex}.burger,.mnav{display:none!important}}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:650;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;text-align:center}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.09)}
+.btn.pri{background:linear-gradient(135deg,var(--cyan),#7DD3FC);color:#06121c;border-color:transparent;box-shadow:0 8px 28px rgba(56,189,248,.28)}
+.btn.pri:hover{box-shadow:0 12px 36px rgba(56,189,248,.45);background:linear-gradient(135deg,#5cc9fb,#a5e1fd)}
+.btn.wa{background:#1fb855;color:#04140a;border-color:transparent}
+.btn.gold{background:linear-gradient(135deg,var(--gold),#ecd07a);color:#201803;border-color:transparent}
+.btn.sm{padding:9px 16px;font-size:.88rem}
+/* Sections */
+section{padding:84px 0;position:relative}
+.s1{background:rgba(11,14,20,.86)}
+.s2{background:rgba(18,23,34,.90)}
+.eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(1.7rem,4.4vw,2.6rem);line-height:1.15;margin-bottom:14px;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:720px;margin-bottom:38px}
+.grid{display:grid;gap:18px}
+@media(min-width:640px){.g2{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .15s ease-out,border-color .25s,box-shadow .25s;transform-style:preserve-3d;will-change:transform;position:relative}
+.card:hover{border-color:rgba(56,189,248,.45);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(56,189,248,.12)}
+.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(135deg,rgba(56,189,248,.2),rgba(248,250,252,.08));border:1px solid var(--line);margin-bottom:16px}
+.card h3{font-size:1.1rem;margin-bottom:8px;line-height:1.3}
+.card p{color:var(--muted);font-size:.95rem}
+/* Hero */
+.hero{min-height:calc(100svh - 66px);display:flex;align-items:center;padding:56px 0 72px;background:transparent}
+.hero .in{max-width:680px}
+.loc{display:inline-block;font-size:.72rem;letter-spacing:.16em;font-weight:700;color:var(--silver);border:1px solid var(--line);background:rgba(22,28,40,.7);padding:8px 14px;border-radius:999px;margin-bottom:16px}
+.avail{display:inline-block;margin:0 0 22px;margin-left:0;font-size:.9rem;padding:8px 14px;border-radius:999px;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.35);display:block;width:fit-content;max-width:100%}
+.avail[hidden]{display:none}
+h1{font-size:clamp(2rem,6.4vw,3.8rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:20px;background:linear-gradient(180deg,#fff 30%,#b6c4d8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(1rem,2.4vw,1.2rem);color:#b8c4d6;margin-bottom:30px;font-style:italic}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+/* Badges */
+.badge{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.04em;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.b-gold{background:rgba(212,175,55,.14);color:var(--gold);border:1px solid rgba(212,175,55,.55)}
+.b-cyan{background:rgba(56,189,248,.12);color:var(--cyan);border:1px solid rgba(56,189,248,.5)}
+.num{font-weight:800;color:var(--cyan);font-size:.85rem;letter-spacing:.1em;margin-bottom:8px}
+/* Contact box */
+.box{margin-top:30px;padding:34px 26px;text-align:center;border-radius:24px;border:1px solid rgba(56,189,248,.4);background:linear-gradient(145deg,rgba(56,189,248,.12),rgba(22,28,40,.9) 55%,rgba(212,175,55,.08))}
+.box h3{font-size:clamp(1.2rem,3vw,1.6rem);margin-bottom:20px}
+.box .cta{justify-content:center}
+.note{margin-top:26px;color:var(--muted);font-size:.9rem;border-left:3px solid var(--gold);padding-left:14px}
+.pcard{display:flex;flex-direction:column}
+.pcard .btn{margin-top:auto;align-self:flex-start}
+.pcard p{margin-bottom:20px}
+/* Form */
+form,.form{display:grid;gap:14px}
+.row{display:grid;gap:14px}
+@media(min-width:640px){.row{grid-template-columns:1fr 1fr}}
+label{font-size:.82rem;color:var(--muted);display:grid;gap:6px;font-weight:600}
+input,select,textarea{background:rgba(11,14,20,.8);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%;font-size:1rem}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);outline:none}
+select option{background:#121722}
+textarea{min-height:130px;resize:vertical}
+.fcard{max-width:760px;margin-inline:auto;padding:30px}
+/* Footer */
+footer{background:#080a0f;border-top:1px solid var(--line);padding:56px 0 34px}
+.fgrid{display:grid;gap:26px;margin-bottom:30px}
+@media(min-width:800px){.fgrid{grid-template-columns:1.2fr 1fr 1fr}}
+footer h4{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+footer li{list-style:none;margin:6px 0;color:var(--muted)}
+footer a:hover{color:var(--silver)}
+details.priv{border:1px solid var(--line);border-radius:16px;background:rgba(22,28,40,.6);padding:16px 20px;margin-bottom:24px}
+details.priv summary{cursor:pointer;font-weight:700}
+details.priv h5{margin:16px 0 4px;color:var(--silver)}
+details.priv p,details.priv li{color:var(--muted);font-size:.9rem;margin-left:0}
+details.priv ul{padding-left:20px}
+.copy{color:#6b788c;font-size:.82rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.linkbtn{background:none;border:0;color:var(--muted);cursor:pointer;text-decoration:underline}
+/* Admin */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(5,7,10,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;padding:16px;overflow:auto}
+.modal[hidden]{display:none}
+.panel{width:min(760px,100%);max-height:92svh;overflow:auto;background:#121722;border:1px solid rgba(56,189,248,.35);border-radius:24px;padding:26px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:10px}
+.ph h3{font-size:1.2rem}
+.x{background:none;border:1px solid var(--line);border-radius:10px;width:38px;height:38px;cursor:pointer}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:none;cursor:pointer;font-size:.85rem;font-weight:650}
+.tab[aria-selected="true"]{background:var(--cyan);color:#06121c;border-color:transparent}
+.opts{display:grid;gap:8px}
+.chk{display:flex;align-items:center;gap:10px;font-size:.95rem;color:var(--silver);font-weight:500}
+.chk input{width:auto}
+.status{font-size:.88rem;color:var(--cyan);min-height:1.3em}
+.out{background:rgba(11,14,20,.8);border:1px dashed var(--line);border-radius:12px;padding:14px;white-space:pre-wrap;font-size:.9rem;color:#cdd7e6}
+#igc{width:min(240px,100%);aspect-ratio:9/16;border-radius:14px;border:1px solid var(--line);background:#0B0E14;margin-inline:auto}
+.err{color:#f87171;font-size:.88rem;min-height:1.2em}
+/* Reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="nova3d" aria-hidden="true"></canvas>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Nova Web Agency – torna in alto">
+      <img id="logo" src="img/logo-nova.png?v=1" alt="Nova Web Agency – Web Design & AI Solutions" height="40">
+      <span class="fb" id="logofb" hidden>NOVA WEB AGENCY</span>
+    </a>
+    <nav class="nav" aria-label="Principale">
+      <a href="#metodo">Metodo</a><a href="#servizi">Servizi</a><a href="#portfolio">Portfolio</a><a href="#contatti">Contatti</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Apri menu" aria-expanded="false">☰</button>
+  </div>
+  <div class="mnav" id="mnav">
+    <a href="#metodo">Metodo</a><a href="#servizi">Servizi</a><a href="#portfolio">Portfolio</a><a href="#contatti">Contatti</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap"><div class="in">
+    <span class="loc">OPERATIVI IN TUTTA ITALIA · WEB DESIGN &amp; AI SOLUTIONS</span>
+    <span class="avail" id="avail" aria-live="polite">🟢 Disponibili 2 posti per nuovi progetti questo mese</span>
+    <h1>Portiamo la tua attività online con siti web su misura e automazioni intelligenti.</h1>
+    <p class="sub">Progettiamo siti web veloci, moderni e pensati per portare clienti reali su WhatsApp e Google. Prima vedi un'anteprima concreta del tuo progetto, poi decidi in totale trasparenza.</p>
+    <div class="cta">
+      <a class="btn pri" href="#portfolio">Esplora i Nostri Lavori</a>
+      <a class="btn" href="#servizi">Scopri Servizi &amp; AI Automations</a>
+      <a class="btn wa" href="https://wa.me/393514115092" target="_blank" rel="noopener noreferrer">Scrivici su WhatsApp</a>
+    </div>
+  </div></div>
+</section>
+
+<!-- METODO -->
+<section class="s1" id="metodo">
+  <div class="wrap">
+    <p class="eyebrow rv">Il nostro metodo trasparente</p>
+    <h2 class="rv">Perché fidarsi di Nova Web Agency</h2>
+    <p class="lead rv">Serietà, trasparenza e tutela del cliente, in tutta Italia. Nessuna sorpresa: tutto chiaro fin dal primo giorno.</p>
+    <div class="grid g4">
+      <article class="card rv" data-tilt><div class="ico">👁️</div><div class="num">01</div><h3>Prima Vedi il Prototipo, Poi Decidi</h3><p>Realizziamo una prima bozza dimostrativa su misura per farti vedere con i tuoi occhi il risultato prima di prendere qualsiasi impegno.</p></article>
+      <article class="card rv" data-tilt><div class="ico">🧾</div><div class="num">02</div><h3>Zero Costi Nascosti &amp; Preventivo Chiaro</h3><p>Sai dal primo giorno cosa è incluso, senza abbonamenti obbligatori o sorprese.</p></article>
+      <article class="card rv" data-tilt><div class="ico">🔑</div><div class="num">03</div><h3>Proprietà Totale al Cliente</h3><p>A lavoro ultimato il sito, il dominio e gli accessi restano interamente tuoi.</p></article>
+      <article class="card rv" data-tilt><div class="ico">🛡️</div><div class="num">04</div><h3>Conformità GDPR &amp; Sicurezza Tecnica</h3><p>Siti veloci, senza cookie invasivi e progettati secondo le normative europee sulla privacy.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="s2" id="servizi">
+  <div class="wrap">
+    <p class="eyebrow rv">Servizi &amp; AI Automations</p>
+    <h2 class="rv">Tutto ciò che serve alla tua attività per crescere online</h2>
+    <p class="lead rv">Soluzioni su misura per attività di tutta Italia: dal sito vetrina alle automazioni che ti fanno risparmiare tempo.</p>
+    <div class="grid g3">
+      <article class="card rv" data-tilt><div class="ico">🌐</div><h3>Siti Web Vetrina &amp; Landing Page Su Misura</h3><p>Veloci, mobile-first, ottimizzati per la SEO locale e nazionale.</p></article>
+      <article class="card rv" data-tilt><div class="ico">🍕</div><h3>Menù Digitali Interattivi &amp; Calcolatori d'Ordine</h3><p>Con filtri allergeni, prezzi calcolati dinamicamente e invio dell'ordine su WhatsApp.</p></article>
+      <article class="card rv" data-tilt><div class="ico">📅</div><h3>Sistemi di Prenotazione Diretta WhatsApp &amp; Gestione Orari</h3><p>Blocchi orari per reparto, giornate occupate e conferme rapide.</p></article>
+      <article class="card rv" data-tilt><div class="ico">🎛️</div><h3>Pannelli di Controllo Autonomi (#Admin)</h3><p>Aggiorni dal telefono lo stato Aperto/Chiuso, gli avvisi e le promozioni in tempo reale.</p></article>
+      <article class="card rv" data-tilt><div class="ico">🤖</div><h3>AI Automations &amp; Generatori Grafici Integrati</h3><p>Creazione automatica di banner promozionali e locandine pronte per le Storie Instagram, assistenti guidati per i clienti e automazioni su misura per risparmiare tempo.</p></article>
+      <article class="card rv" data-tilt><div class="ico">⭐</div><h3>Ottimizzazione Google Maps &amp; QR Code Recensioni</h3><p>Strategie concrete per aumentare le recensioni a 5 stelle e scalare le ricerche locali.</p></article>
+    </div>
+    <div class="box rv">
+      <h3>Hai un'idea specifica o vuoi un progetto su misura? Per scoprire di più scrivici senza impegno!</h3>
+      <div class="cta">
+        <a class="btn wa" href="https://wa.me/393514115092" target="_blank" rel="noopener noreferrer">💬 WhatsApp · 351 411 5092</a>
+        <a class="btn" href="https://instagram.com/novawebagency3" target="_blank" rel="noopener noreferrer">📸 Instagram · @novawebagency3</a>
+        <a class="btn" href="mailto:novawebagency3@gmail.com">✉️ novawebagency3@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="s1" id="portfolio">
+  <div class="wrap">
+    <p class="eyebrow rv">Portfolio</p>
+    <h2 class="rv">Progetti reali, con stato trasparente</h2>
+    <p class="lead rv">Ti mostriamo cosa è finito e cosa è ancora in lavorazione: niente promesse gonfiate.</p>
+    <div class="grid g2">
+      <article class="card pcard rv" data-tilt>
+        <div><span class="badge b-gold">✅ PROGETTO COMPLETO &amp; ATTIVO</span></div>
+        <h3>Golden Studio – Tattoo, Nails &amp; Beauty</h3>
+        <p>Sito ufficiale completo con gallerie lavori, prenotazione WhatsApp divisa per reparto, pannello Admin real-time con blocco orari, effetto 3D, Modalità Natale e generatore automatico di locandine Storia Instagram.</p>
+        <a class="btn gold" href="https://github.io" target="_blank" rel="noopener noreferrer">Apri Anteprima Live ↗</a>
+      </article>
+      <article class="card pcard rv" data-tilt>
+        <div><span class="badge b-cyan">🚧 PROTOTIPO IN EVOLUZIONE</span></div>
+        <h3>Extrafocaccia Pizzeria</h3>
+        <p>Piattaforma per pizzeria con menù digitale ricercabile, prezzi al piatto e al mezzo metro, filtro Senza Glutine e calcolatore automatico dell'ordine d'asporto. <em>(In corso di personalizzazione e rifinitura).</em></p>
+        <a class="btn pri" href="https://github.io" target="_blank" rel="noopener noreferrer">Apri Anteprima Live ↗</a>
+      </article>
+      <article class="card pcard rv" data-tilt>
+        <div><span class="badge b-cyan">🚧 PROTOTIPO IN EVOLUZIONE</span></div>
+        <h3>Piccolo West – Ristorante, Pizzeria Gourmet &amp; Brace</h3>
+        <p>Sito vetrina con menù digitale filtrabile, galleria del locale e percorso guidato a 3 step per prenotazione tavoli o asporto su WhatsApp. <em>(In corso di personalizzazione e rifinitura).</em></p>
+        <a class="btn pri" href="https://github.io" target="_blank" rel="noopener noreferrer">Apri Anteprima Live ↗</a>
+      </article>
+      <article class="card pcard rv" data-tilt>
+        <div><span class="badge b-cyan">🚧 PROTOTIPO IN EVOLUZIONE</span></div>
+        <h3>AL J – Bar, Ristorante &amp; Eventi sul Porto</h3>
+        <p>Concept elegante per lounge bar e ristorante sul porto turistico con presentazione proposte giornaliere, recensioni verificate e prenotazione rapida tavoli ed eventi su WhatsApp. <em>(In corso di personalizzazione e rifinitura).</em></p>
+        <a class="btn pri" href="https://github.io" target="_blank" rel="noopener noreferrer">Apri Anteprima Live ↗</a>
+      </article>
+    </div>
+    <p class="note rv">Tranne Golden Studio (già completato e attivo), gli altri progetti mostrati sono prototipi dimostrativi attualmente in fase di evoluzione e personalizzazione.</p>
+  </div>
+</section>
+
+<!-- CONFIGURATORE -->
+<section class="s2" id="contatti">
+  <div class="wrap">
+    <p class="eyebrow rv">Contatti diretti · Tutta Italia</p>
+    <h2 class="rv">Richiedi Info o una Bozza Gratuita</h2>
+    <p class="lead rv">Compila in 20 secondi: scegli come contattarci e il messaggio è già pronto.</p>
+    <div class="card fcard rv">
+      <form id="cfg" novalidate>
+        <div class="row">
+          <label>Tipo di attività
+            <select id="c-tipo">
+              <option>Ristorante / Pizzeria / Bar</option><option>Estetica / Tattoo / Beauty</option><option>Negozio / Commercio</option><option>Professionista / Servizi</option><option>Altro</option>
+            </select></label>
+          <label>Servizio desiderato
+            <select id="c-serv">
+              <option>Sito Web Vetrina / Landing Page</option><option>Menù Digitale &amp; Calcolatore d'Ordine</option><option>Prenotazioni WhatsApp &amp; Gestione Orari</option><option>Pannello di Controllo (#Admin)</option><option>AI Automations &amp; Generatori Grafici</option><option>Google Maps &amp; QR Code Recensioni</option><option>Progetto su misura</option>
+            </select></label>
+        </div>
+        <div class="row">
+          <label>Nome attività<input id="c-nome" type="text" autocomplete="organization" maxlength="80" placeholder="Es. Pizzeria da Mario"></label>
+          <label>Città<input id="c-citta" type="text" autocomplete="address-level2" maxlength="60" placeholder="Es. Milano"></label>
+        </div>
+        <div class="cta">
+          <button type="button" class="btn wa" id="c-wa">💬 Invia su WhatsApp</button>
+          <button type="button" class="btn" id="c-mail">✉️ Invia via Email</button>
+          <button type="button" class="btn" id="c-ig">📸 Scrivi su Instagram</button>
+        </div>
+        <p class="status" id="c-st" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="brand"><span class="fb">NOVA WEB AGENCY</span></div><ul><li>Web Design &amp; AI Solutions</li><li>Operatività: <strong>Tutta Italia</strong></li></ul></div>
+      <div><h4>Contatti</h4><ul>
+        <li>WhatsApp: <a href="https://wa.me/393514115092" target="_blank" rel="noopener noreferrer">351 411 5092</a></li>
+        <li>Email: <a href="mailto:novawebagency3@gmail.com">novawebagency3@gmail.com</a></li>
+        <li>Instagram: <a href="https://instagram.com/novawebagency3" target="_blank" rel="noopener noreferrer">@novawebagency3</a></li></ul></div>
+      <div><h4>Navigazione</h4><ul><li><a href="#metodo">Metodo</a></li><li><a href="#servizi">Servizi</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contatti">Richiedi una bozza</a></li></ul></div>
+    </div>
+    <details class="priv" id="privacy">
+      <summary>Informativa Privacy (GDPR) · Nessun cookie di profilazione</summary>
+      <h5>Titolare del trattamento</h5>
+      <p>Nova Web Agency – Web Design &amp; AI Solutions. Contatto privacy: novawebagency3@gmail.com.</p>
+      <h5>Dati trattati e finalità</h5>
+      <p>Questo sito non utilizza cookie di profilazione né strumenti di tracciamento di terze parti. Non raccoglie dati tramite moduli propri: il configuratore "Richiedi Info" compone un messaggio che viene inviato solo se e quando scegli tu di aprire WhatsApp, Email o Instagram. I dati che inserisci (nome attività, città, tipo di attività, servizio) restano nel tuo dispositivo fino all'invio e sono usati esclusivamente per risponderti e preparare un preventivo o una bozza (art. 6.1.b GDPR, misure precontrattuali, e art. 6.1.a, consenso implicito nell'invio volontario).</p>
+      <h5>Servizi di terze parti</h5>
+      <ul>
+        <li>Disponibilità mensile: il sito legge un piccolo file pubblico da JSONBin; il servizio può registrare l'indirizzo IP tecnico della richiesta.</li>
+        <li>Quando apri WhatsApp, Instagram o il tuo client email, i dati sono trattati dai rispettivi fornitori secondo le loro informative.</li>
+        <li>Il sito è ospitato su GitHub Pages, che può registrare log tecnici di accesso.</li>
+      </ul>
+      <h5>Archiviazione locale</h5>
+      <p>Nessuna archiviazione locale per i visitatori. L'area riservata all'agenzia può salvare nel browser dell'operatore una chiave tecnica di servizio.</p>
+      <h5>Conservazione e diritti</h5>
+      <p>Le comunicazioni ricevute sono conservate per il tempo necessario a gestire la richiesta e gli obblighi di legge. Hai diritto di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione (artt. 15-22 GDPR), e di proporre reclamo al Garante per la protezione dei dati personali (garanteprivacy.it). Scrivi a novawebagency3@gmail.com.</p>
+    </details>
+    <div class="copy"><span>© <span id="yr"></span> Nova Web Agency · Web Design &amp; AI Solutions · Tutta Italia</span><button class="linkbtn" id="openPriv" type="button">Privacy &amp; GDPR</button></div>
+  </div>
+</footer>
+
+<!-- ADMIN -->
+<div class="modal" id="admin" role="dialog" aria-modal="true" aria-labelledby="adm-t" hidden>
+  <div class="panel">
+    <div class="ph"><h3 id="adm-t">🔒 Pannello Riservato Agenzia</h3><button class="x" id="adm-x" aria-label="Chiudi">✕</button></div>
+    <div id="adm-pin">
+      <form class="form" id="pinForm" novalidate>
+        <label>Inserisci il PIN<input id="pin" type="password" inputmode="numeric" autocomplete="off" maxlength="12"></label>
+        <button class="btn pri" type="submit">Accedi</button>
+        <p class="err" id="pin-err" role="alert"></p>
+      </form>
+    </div>
+    <div id="adm-tools" hidden>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="t1" aria-selected="true">Disponibilità</button>
+        <button class="tab" role="tab" data-tab="t2" aria-selected="false">Primo contatto</button>
+        <button class="tab" role="tab" data-tab="t3" aria-selected="false">Offerta</button>
+        <button class="tab" role="tab" data-tab="t4" aria-selected="false">Storia IG</button>
+      </div>
+
+      <div id="t1" class="form">
+        <label>X-Master-Key JSONBin (salvata solo in questo browser)<input id="mk" type="password" autocomplete="off" placeholder="$2a$10$..."></label>
+        <button class="btn sm" type="button" id="mk-save">Salva chiave</button>
+        <div class="opts">
+          <button class="btn" type="button" data-av="0">🟢 Disponibili 2 posti per nuovi progetti questo mese</button>
+          <button class="btn" type="button" data-av="1">🟡 Ultimo posto disponibile per questo mese</button>
+          <button class="btn" type="button" data-av="2">🔴 Posti esauriti · Prenotazioni aperte per il prossimo mese</button>
+          <button class="btn" type="button" data-av="3">✖️ Nascondi badge</button>
+        </div>
+        <p class="status" id="av-st" role="status"></p>
+      </div>
+
+      <div id="t2" class="form" hidden>
+        <div class="row">
+          <label>Nome attività<input id="m-nome" type="text" maxlength="80"></label>
+          <label>Città<input id="m-citta" type="text" maxlength="60"></label>
+        </div>
+        <div class="row">
+          <label>Settore<select id="m-sett"><option value="r">Ristorante / Pizzeria</option><option value="e">Estetica / Tattoo</option><option value="l">Attività Locale / Servizi</option></select></label>
+          <label>Numero WhatsApp cliente<input id="m-num" type="tel" inputmode="tel" placeholder="3xx xxx xxxx"></label>
+        </div>
+        <label>Link prototipo<input id="m-link" type="url" placeholder="https://..."></label>
+        <button class="btn pri" type="button" id="m-gen">Genera messaggio</button>
+        <div class="out" id="m-out">Il messaggio apparirà qui.</div>
+        <div class="cta"><button class="btn sm" type="button" id="m-copy">📋 Copia</button><button class="btn wa sm" type="button" id="m-wa">📲 Apri WhatsApp</button></div>
+        <p class="err" id="m-err" role="alert"></p>
+      </div>
+
+      <div id="t3" class="form" hidden>
+        <div class="opts" id="o-list">
+          <label class="chk"><input type="checkbox" value="Sito Web Vetrina / Landing Page" checked> Sito Web Vetrina / Landing Page</label>
+          <label class="chk"><input type="checkbox" value="Menù Digitale &amp; Calcolatore d'Ordine"> Menù Digitale &amp; Calcolatore d'Ordine</label>
+          <label class="chk"><input type="checkbox" value="Prenotazioni WhatsApp &amp; Gestione Orari"> Prenotazioni WhatsApp &amp; Gestione Orari</label>
+          <label class="chk"><input type="checkbox" value="Pannello di Controllo (#Admin)"> Pannello di Controllo (#Admin)</label>
+          <label class="chk"><input type="checkbox" value="AI Automations &amp; Generatori Grafici"> AI Automations &amp; Generatori Grafici</label>
+          <label class="chk"><input type="checkbox" value="Ottimizzazione Google Maps &amp; QR Recensioni"> Ottimizzazione Google Maps &amp; QR Recensioni</label>
+        </div>
+        <div class="row">
+          <label>Prezzo (€)<input id="o-prezzo" type="number" min="0" step="10" inputmode="numeric"></label>
+          <label>Giorni di consegna<input id="o-giorni" type="number" min="1" step="1" inputmode="numeric"></label>
+        </div>
+        <div class="out" id="o-out">Il riepilogo apparirà qui.</div>
+        <div class="cta"><button class="btn sm" type="button" id="o-copy">📋 Copia Riepilogo Offerta</button><button class="btn wa sm" type="button" id="o-wa">📲 Invia su WhatsApp</button></div>
+        <p class="status" id="o-st" role="status"></p>
+      </div>
+
+      <div id="t4" class="form" hidden>
+        <label>Nome cliente consegnato<input id="s-nome" type="text" maxlength="60" placeholder="Es. Golden Studio"></label>
+        <label>Screenshot del sito (opzionale)<input id="s-file" type="file" accept="image/*"></label>
+        <canvas id="igc" width="1080" height="1920"></canvas>
+        <button class="btn gold" type="button" id="s-dl">🎨 Scarica Storia IG (1080x1920)</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,p){return(p||document).querySelector(s)},$$=function(s,p){return Array.prototype.slice.call((p||document).querySelectorAll(s))};
+document.documentElement.classList.add('js');
+
+/* ===== CONFIG ===== */
+var CFG={
+  PIN:'2026',
+  BIN:'6afb6e7cac6210605a8d02f5',
+  API:'https://api.jsonbin.io/v3/b/',
+  WA:'393514115092',
+  MAIL:'novawebagency3@gmail.com',
+  IG:'https://instagram.com/novawebagency3',
+  FALLBACK:'🟢 Disponibili 2 posti per nuovi progetti questo mese'
+};
+var AV=[
+  {attivo:true,disponibilita:'🟢 Disponibili 2 posti per nuovi progetti questo mese'},
+  {attivo:true,disponibilita:'🟡 Ultimo posto disponibile per questo mese'},
+  {attivo:true,disponibilita:'🔴 Posti esauriti · Prenotazioni aperte per il prossimo mese'},
+  {attivo:false,disponibilita:''}
+];
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* ===== Utility ===== */
+function wa(text,num){window.open('https://wa.me/'+(num||CFG.WA)+'?text='+encodeURIComponent(text),'_blank','noopener,noreferrer')}
+function copy(text,el){
+  var done=function(m){if(el)el.textContent=m};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){done('✅ Copiato negli appunti')},function(){fb()})}else fb();
+  function fb(){var t=document.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.className='';document.body.appendChild(t);t.select();try{document.execCommand('copy');done('✅ Copiato negli appunti')}catch(e){done('Copia non riuscita')}document.body.removeChild(t)}
+}
+$('#yr').textContent=new Date().getFullYear();
+
+/* ===== Logo fallback ===== */
+(function(){var img=$('#logo'),fb=$('#logofb');
+  function bad(){img.hidden=true;fb.hidden=false}
+  img.addEventListener('error',bad);
+  if(img.complete&&img.naturalWidth===0)bad();
+})();
+
+/* ===== Menu mobile ===== */
+$('#burger').addEventListener('click',function(){var o=$('#mnav').classList.toggle('open');this.setAttribute('aria-expanded',o)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){$('#mnav').classList.remove('open')})});
+
+/* ===== Reveal ===== */
+(function(){var els=$$('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+/* ===== Tilt 3D ===== */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!reduce){
+  $$('[data-tilt]').forEach(function(el){
+    el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+      el.style.transform='perspective(900px) rotateX('+(-py*7).toFixed(2)+'deg) rotateY('+(px*7).toFixed(2)+'deg) translateY(-3px)'});
+    el.addEventListener('pointerleave',function(){el.style.transform=''});
+  });
+}
+
+/* ===== Motore 3D Canvas ===== */
+(function(){
+  var cv=$('#nova3d'),ctx=cv.getContext('2d');if(!ctx)return;
+  var W,H,dpr,cx,cy,R,small,mx=0,my=0,tx=0,ty=0,raf=0;
+  var nodes=[],edges=[],parts=[];
+  function build(){
+    small=innerWidth<700;
+    var N=small?62:112;nodes=[];edges=[];parts=[];
+    for(var i=0;i<N;i++){var y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=i*2.399963229728653;nodes.push({x:Math.cos(th)*r,y:y,z:Math.sin(th)*r,c:i%5===0})}
+    var thr=2*Math.sqrt(4*Math.PI/N)*.95;
+    for(var a=0;a<N;a++)for(var b=a+1;b<N;b++){var dx=nodes[a].x-nodes[b].x,dy=nodes[a].y-nodes[b].y,dz=nodes[a].z-nodes[b].z;if(Math.sqrt(dx*dx+dy*dy+dz*dz)<thr)edges.push([a,b])}
+    var M=small?34:70;
+    for(var k=0;k<M;k++)parts.push({s:Math.random()<.5?-1:1,x:.55+Math.random()*.45,y:Math.random(),z:Math.random(),v:.00006+Math.random()*.00018,w:Math.random()*6.28});
+  }
+  function size(){
+    dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;
+    cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    var s=innerWidth<700;if(s!==small||!nodes.length)build();
+    cx=W>900?W*.70:W*.5;cy=W>900?H*.48:H*.36;R=Math.min(W,H)*(W>900?.36:.33);
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    var sy=window.scrollY||0;
+    tx+=(mx-tx)*.05;ty+=(my-ty)*.05;
+    var ry=t*.00014+sy*.0009+tx*.7,rx=.32+ty*.55+Math.sin(t*.0003)*.06+sy*.00025;
+    var cY=Math.cos(ry),sY=Math.sin(ry),cX=Math.cos(rx),sX=Math.sin(rx);
+    var pulse=1+.028*Math.sin(t*.0017),P=[];
+    for(var i=0;i<nodes.length;i++){var n=nodes[i];
+      var x1=n.x*cY+n.z*sY,z1=-n.x*sY+n.z*cY,y2=n.y*cX-z1*sX,z2=n.y*sX+z1*cX,s=3/(3-z2);
+      P.push({x:cx+x1*R*pulse*s,y:cy+y2*R*pulse*s,d:(z2+1)/2,c:n.c});}
+    ctx.lineWidth=1;
+    for(var e=0;e<edges.length;e++){var A=P[edges[e][0]],B=P[edges[e][1]],d=(A.d+B.d)/2;
+      ctx.strokeStyle='rgba(56,189,248,'+(.05+.34*d*d).toFixed(3)+')';ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.lineTo(B.x,B.y);ctx.stroke();}
+    for(var j=0;j<P.length;j++){var p=P[j],r=.9+2.6*p.d,col=p.c?'248,250,252':'56,189,248';
+      if(p.d>.55){ctx.fillStyle='rgba('+col+','+(.12*p.d).toFixed(3)+')';ctx.beginPath();ctx.arc(p.x,p.y,r*3.2,0,6.283);ctx.fill();}
+      ctx.fillStyle='rgba('+col+','+(.35+.65*p.d).toFixed(3)+')';ctx.beginPath();ctx.arc(p.x,p.y,r,0,6.283);ctx.fill();}
+    for(var q=0;q<parts.length;q++){var o=parts[q];
+      o.z-=o.v*16;o.y-=o.v*9;if(o.z<0)o.z+=1;if(o.y<0)o.y+=1;
+      var px=W/2+o.s*o.x*(W/2)*(1.25-o.z*.5)+Math.sin(t*.0004+o.w)*8,py=o.y*H,al=(1-o.z)*.8+.1;
+      ctx.fillStyle='rgba('+(q%3?'248,250,252':'56,189,248')+','+al.toFixed(2)+')';
+      ctx.beginPath();ctx.arc(px,py,.6+(1-o.z)*2,0,6.283);ctx.fill();}
+  }
+  function loop(t){draw(t);raf=requestAnimationFrame(loop)}
+  function start(){if(!raf&&!reduce)raf=requestAnimationFrame(loop)}
+  function stop(){if(raf){cancelAnimationFrame(raf);raf=0}}
+  addEventListener('resize',function(){size();if(reduce)draw(0)});
+  addEventListener('pointermove',function(e){mx=(e.clientX/W-.5)*2;my=(e.clientY/H-.5)*2},{passive:true});
+  addEventListener('scroll',function(){if(reduce)draw(0)},{passive:true});
+  document.addEventListener('visibilitychange',function(){document.hidden?stop():start()});
+  size();if(reduce)draw(0);else start();
+})();
+
+/* ===== Badge disponibilità JSONBin ===== */
+(function(){
+  var el=$('#avail');
+  fetch(CFG.API+CFG.BIN+'/latest?nocache='+Date.now(),{cache:'no-store',headers:{'X-Bin-Meta':'false'}})
+  .then(function(r){if(!r.ok)throw 0;return r.json()})
+  .then(function(d){var rec=d&&d.record?d.record:d;
+    if(rec&&rec.attivo===true&&typeof rec.disponibilita==='string'&&rec.disponibilita.trim()){el.textContent=rec.disponibilita.trim();el.hidden=false}
+    else if(rec&&rec.attivo===false){el.hidden=true}
+  }).catch(function(){el.textContent=CFG.FALLBACK});
+})();
+
+/* ===== Configuratore pubblico ===== */
+(function(){
+  function msg(){
+    var t=$('#c-tipo').value,s=$('#c-serv').value,n=$('#c-nome').value.trim(),c=$('#c-citta').value.trim();
+    return 'Ciao Nova Web Agency! Vorrei informazioni'+(s?' per: '+s:'')+'.\nTipo di attività: '+t+(n?'\nNome attività: '+n:'')+(c?'\nCittà: '+c:'')+'\nMi piacerebbe vedere una bozza gratuita. Grazie!';
+  }
+  $('#c-wa').addEventListener('click',function(){wa(msg())});
+  $('#c-mail').addEventListener('click',function(){location.href='mailto:'+CFG.MAIL+'?subject='+encodeURIComponent('Richiesta info / bozza gratuita')+'&body='+encodeURIComponent(msg())});
+  $('#c-ig').addEventListener('click',function(){copy(msg(),$('#c-st'));$('#c-st').textContent='Messaggio copiato: incollalo nella chat Instagram che si sta aprendo.';window.open(CFG.IG,'_blank','noopener,noreferrer')});
+})();
+
+/* ===== Privacy ===== */
+$('#openPriv').addEventListener('click',function(){var d=$('#privacy');d.open=true;d.scrollIntoView({behavior:'smooth',block:'center'})});
+
+/* ===== ADMIN ===== */
+(function(){
+  var modal=$('#admin'),unlocked=false;
+  function open(){modal.hidden=false;document.body.style.overflow='hidden';if(!unlocked)setTimeout(function(){$('#pin').focus()},50)}
+  function close(){modal.hidden=true;document.body.style.overflow='';if(location.hash==='#admin')history.replaceState(null,'',location.pathname+location.search)}
+  function route(){if(location.hash==='#admin')open()}
+  addEventListener('hashchange',route);route();
+  $('#adm-x').addEventListener('click',close);
+  modal.addEventListener('click',function(e){if(e.target===modal)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)close()});
+
+  $('#pinForm').addEventListener('submit',function(e){e.preventDefault();
+    if($('#pin').value===CFG.PIN){unlocked=true;$('#adm-pin').hidden=true;$('#adm-tools').hidden=false;$('#pin').value='';$('#pin-err').textContent='';
+      try{$('#mk').value=localStorage.getItem('nova_mk')||''}catch(x){}}
+    else{$('#pin-err').textContent='PIN non corretto.';$('#pin').value=''}
+  });
+
+  $$('.tab').forEach(function(b){b.addEventListener('click',function(){
+    $$('.tab').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    ['t1','t2','t3','t4'].forEach(function(id){$('#'+id).hidden=id!==b.dataset.tab});
+    if(b.dataset.tab==='t4')drawStory();
+  })});
+
+  /* 1 Disponibilità */
+  $('#mk-save').addEventListener('click',function(){try{localStorage.setItem('nova_mk',$('#mk').value.trim());$('#av-st').textContent='✅ Chiave salvata in questo browser.'}catch(e){$('#av-st').textContent='Impossibile salvare la chiave.'}});
+  $$('[data-av]').forEach(function(b){b.addEventListener('click',function(){
+    var key=$('#mk').value.trim(),st=$('#av-st');if(!key){st.textContent='Inserisci prima la X-Master-Key.';return}
+    st.textContent='Aggiornamento in corso…';
+    fetch(CFG.API+CFG.BIN,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':key},body:JSON.stringify(AV[+b.dataset.av])})
+    .then(function(r){if(!r.ok)throw new Error(r.status);try{localStorage.setItem('nova_mk',key)}catch(e){}
+      st.textContent='✅ Badge aggiornato. Visibile ai visitatori al prossimo caricamento.';
+      var el=$('#avail'),v=AV[+b.dataset.av];if(v.attivo){el.textContent=v.disponibilita;el.hidden=false}else el.hidden=true})
+    .catch(function(e){st.textContent='❌ Errore ('+(e.message||'rete')+'). Controlla la chiave e riprova.'});
+  })});
+
+  /* 2 Primo contatto */
+  var mText='';
+  function genMsg(){
+    var n=$('#m-nome').value.trim(),c=$('#m-citta').value.trim(),s=$('#m-sett').value,l=$('#m-link').value.trim(),err=$('#m-err');
+    if(!n||!c){err.textContent='Inserisci almeno nome attività e città.';return false}err.textContent='';
+    var hook={r:'Ho pensato a un sito con menù digitale, filtri allergeni e prenotazione/asporto direttamente su WhatsApp, così ogni cliente ti scrive già con l\'ordine pronto.',
+      e:'Ho pensato a un sito elegante con galleria dei lavori e prenotazione su WhatsApp, così i clienti scelgono servizio e orario in pochi tocchi.',
+      l:'Ho pensato a un sito veloce e ottimizzato per Google, con contatto diretto su WhatsApp, per farti trovare da più clienti nella tua zona.'}[s];
+    mText='Buongiorno! Sono di Nova Web Agency. Ho visto la vostra attività "'+n+'" a '+c+' e mi è piaciuta molto.\n\n'+hook+'\n\nPer farvi capire il risultato senza alcun impegno, ho preparato un\'anteprima gratuita su misura'+(l?':\n'+l:'.')+'\n\nDateci un\'occhiata con calma: se vi piace ne parliamo, altrimenti nessun problema. Il sito, il dominio e gli accessi restano sempre vostri.\n\nUn saluto,\nNova Web Agency\n@novawebagency3';
+    $('#m-out').textContent=mText;return true;
+  }
+  $('#m-gen').addEventListener('click',genMsg);
+  $('#m-copy').addEventListener('click',function(){if(genMsg())copy(mText,$('#m-err'))});
+  $('#m-wa').addEventListener('click',function(){if(!genMsg())return;
+    var d=$('#m-num').value.replace(/\D/g,'');if(d.indexOf('00')===0)d=d.slice(2);if(d&&d.length<=10&&d.indexOf('39')!==0)d='39'+d;
+    if(!d){$('#m-err').textContent='Inserisci il numero WhatsApp del cliente.';return}wa(mText,d)});
+
+  /* 3 Offerta */
+  function offer(){
+    var sv=$$('#o-list input:checked').map(function(i){return '• '+i.value}),p=$('#o-prezzo').value,g=$('#o-giorni').value;
+    var t='📋 OFFERTA · NOVA WEB AGENCY\n\nServizi inclusi:\n'+(sv.length?sv.join('\n'):'• (nessun servizio selezionato)')+'\n\n💶 Prezzo: '+(p?'€ '+p:'da definire')+'\n⏱️ Consegna: '+(g?g+' giorni':'da concordare')+'\n\n✅ Prima vedi il prototipo, poi decidi\n✅ Nessun costo nascosto o abbonamento obbligatorio\n✅ Sito, dominio e accessi di tua proprietà\n\nNova Web Agency · @novawebagency3';
+    $('#o-out').textContent=t;return t;
+  }
+  $$('#t3 input').forEach(function(i){i.addEventListener('input',offer)});offer();
+  $('#o-copy').addEventListener('click',function(){copy(offer(),$('#o-st'))});
+  $('#o-wa').addEventListener('click',function(){wa(offer())});
+
+  /* 4 Storia IG */
+  var shot=null;
+  function rr(x,a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()}
+  function wrap(x,text,maxW){var words=text.split(/\s+/),lines=[],cur='';words.forEach(function(w){var t=cur?cur+' '+w:w;if(x.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t});if(cur)lines.push(cur);return lines}
+  function drawStory(){
+    var c=$('#igc'),x=c.getContext('2d'),W=1080,H=1920,name=$('#s-nome').value.trim()||'Il tuo progetto';
+    var g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#0B0E14');g.addColorStop(1,'#121722');x.fillStyle=g;x.fillRect(0,0,W,H);
+    var r1=x.createRadialGradient(540,520,0,540,520,760);r1.addColorStop(0,'rgba(56,189,248,.30)');r1.addColorStop(1,'rgba(56,189,248,0)');x.fillStyle=r1;x.fillRect(0,0,W,H);
+    var r2=x.createRadialGradient(540,1750,0,540,1750,700);r2.addColorStop(0,'rgba(212,175,55,.26)');r2.addColorStop(1,'rgba(212,175,55,0)');x.fillStyle=r2;x.fillRect(0,0,W,H);
+    x.strokeStyle='rgba(255,255,255,.04)';x.lineWidth=1;for(var i=0;i<=W;i+=60){x.beginPath();x.moveTo(i,0);x.lineTo(i,H);x.stroke()}for(var j=0;j<=H;j+=60){x.beginPath();x.moveTo(0,j);x.lineTo(W,j);x.stroke()}
+    x.textAlign='center';x.textBaseline='alphabetic';
+    x.fillStyle='#F8FAFC';x.font='700 38px system-ui,-apple-system,Segoe UI,Roboto,sans-serif';if('letterSpacing' in x)x.letterSpacing='10px';x.fillText('NOVA WEB AGENCY',W/2,130);
+    x.fillStyle='#38BDF8';x.font='700 30px system-ui,sans-serif';x.fillText('WEB DESIGN & AI SOLUTIONS',W/2,182);
+    if('letterSpacing' in x)x.letterSpacing='0px';
+    var tg=x.createLinearGradient(0,260,0,400);tg.addColorStop(0,'#FFFFFF');tg.addColorStop(1,'#9fb3cc');x.fillStyle=tg;x.font='900 104px system-ui,-apple-system,Segoe UI,Roboto,sans-serif';
+    x.fillText('NUOVO SITO',W/2,330);x.fillText('ONLINE 🚀',W/2,440);
+    x.fillStyle='#D4AF37';x.font='800 58px system-ui,sans-serif';var ls=wrap(x,name,900).slice(0,2);ls.forEach(function(l,k){x.fillText(l,W/2,540+k*68)});
+    var fy=640+(ls.length>1?40:0),fh=900-(ls.length>1?40:0),fx=190,fw=700;
+    x.save();x.shadowColor='rgba(56,189,248,.55)';x.shadowBlur=60;rr(x,fx,fy,fw,fh,48);x.fillStyle='#0B0E14';x.fill();x.restore();
+    x.save();rr(x,fx+10,fy+10,fw-20,fh-20,40);x.clip();
+    if(shot){var s=Math.max((fw-20)/shot.width,(fh-20)/shot.height),dw=shot.width*s,dh=shot.height*s;x.drawImage(shot,fx+10+(fw-20-dw)/2,fy+10,dw,dh)}
+    else{var pg=x.createLinearGradient(fx,fy,fx+fw,fy+fh);pg.addColorStop(0,'#16202f');pg.addColorStop(1,'#0e1420');x.fillStyle=pg;x.fillRect(fx,fy,fw,fh);x.fillStyle='rgba(56,189,248,.5)';x.font='700 40px system-ui,sans-serif';x.fillText('ANTEPRIMA SITO',W/2,fy+fh/2)}
+    x.restore();
+    rr(x,fx,fy,fw,fh,48);x.strokeStyle='rgba(56,189,248,.8)';x.lineWidth=4;x.stroke();
+    var by=fy+fh+70;rr(x,230,by,620,86,43);x.fillStyle='rgba(212,175,55,.15)';x.fill();x.strokeStyle='#D4AF37';x.lineWidth=3;x.stroke();
+    x.fillStyle='#D4AF37';x.font='800 36px system-ui,sans-serif';x.fillText('✅ PROGETTO COMPLETO',W/2,by+57);
+    x.fillStyle='#F8FAFC';x.font='700 34px system-ui,sans-serif';if('letterSpacing' in x)x.letterSpacing='4px';x.fillText('NOVA WEB AGENCY · @novawebagency3',W/2,H-90);if('letterSpacing' in x)x.letterSpacing='0px';
+  }
+  $('#s-nome').addEventListener('input',drawStory);
+  $('#s-file').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f){shot=null;drawStory();return}
+    var u=URL.createObjectURL(f),im=new Image();im.onload=function(){shot=im;drawStory();URL.revokeObjectURL(u)};im.onerror=function(){shot=null;URL.revokeObjectURL(u);drawStory()};im.src=u});
+  $('#s-dl').addEventListener('click',function(){drawStory();var slug=($('#s-nome').value.trim()||'cliente').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    $('#igc').toBlob(function(b){if(!b)return;var a=document.createElement('a'),u=URL.createObjectURL(b);a.href=u;a.download='nova-storia-'+slug+'.png';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u)},4000)},'image/png')});
+})();
+})();
+</script>
+</body>
+</html>
